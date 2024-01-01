@@ -1,7 +1,7 @@
-import { produce } from "immer";
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import media from "../../utils/media";
+import { produce } from 'immer';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import media from '../../utils/media';
 
 const MainContent = styled.div`
   display: flex;
@@ -155,7 +155,7 @@ const Color = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: ${(props) => (props.$isSelect ? "1px solid #979797" : "none")};
+  border: ${(props) => (props.$isSelect ? '1px solid #979797' : 'none')};
 `;
 
 const Box = styled.div`
@@ -383,7 +383,7 @@ function ProductContent({ product, setTotalQuantity }) {
     sizes,
   } = product;
 
-  const descriptionLines = description.split("\r\n").map((line, index) => (
+  const descriptionLines = description.split('\r\n').map((line, index) => (
     <React.Fragment key={index}>
       {line}
       <br />
@@ -391,7 +391,7 @@ function ProductContent({ product, setTotalQuantity }) {
   ));
 
   const [cart, setCart] = useState(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
     return savedCart;
   });
   const [selectedColor, setSelectedColor] = useState(null);
@@ -492,7 +492,7 @@ function ProductContent({ product, setTotalQuantity }) {
         selectedQuantity == selectedVariant.stock &&
         selectedVariant.stock !== 0
       ) {
-        alert("已達商品上限");
+        alert('已達商品上限');
       }
       if (selectedVariant.stock <= 0) {
         alert(
@@ -516,7 +516,7 @@ function ProductContent({ product, setTotalQuantity }) {
         const updatedCart = [...cart];
         updatedCart[existingProductIndex].qty += selectedQuantity;
         setCart(updatedCart);
-        localStorage.setItem("cart", JSON.stringify(updatedCart));
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
       } else {
         const newItem = {
           id: id,
@@ -532,22 +532,21 @@ function ProductContent({ product, setTotalQuantity }) {
           max_stock: recordMaximumStock.stock,
         };
         const updatedCart = [...cart, newItem];
-        console.log(newItem);
         setCart(updatedCart);
-        localStorage.setItem("cart", JSON.stringify(updatedCart));
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
       }
 
       resetOption();
     }
   };
 
-  let buttonText = "請選擇顏色";
+  let buttonText = '請選擇顏色';
   if (selectedColor && selectedSize && selectedQuantity > 0) {
-    buttonText = "加入購物車";
+    buttonText = '加入購物車';
   } else if (selectedSize) {
-    buttonText = "請選擇件數";
+    buttonText = '請選擇件數';
   } else if (selectedColor) {
-    buttonText = "請選擇尺寸";
+    buttonText = '請選擇尺寸';
   }
 
   return (

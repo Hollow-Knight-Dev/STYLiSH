@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import styled from "styled-components";
-import Button from "../../components/Button";
-import Error from "../../components/Error";
-import Loading from "../../components/Loading";
-import ProductContent from "./ProductContent";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
+import Button from '../../components/Button';
+import Error from '../../components/Error';
+import Loading from '../../components/Loading';
+import ProductContent from './ProductContent';
 
 const Main = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 `;
 
 function Product({ setTotalQuantity }) {
@@ -22,7 +23,7 @@ function Product({ setTotalQuantity }) {
   function resetPagePosition() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }
 
@@ -33,7 +34,7 @@ function Product({ setTotalQuantity }) {
           `https://api.appworks-school.tw/api/1.0/products/details?id=${id}`
         );
         if (!response.ok) {
-          throw new Error("Failed to fetch data");
+          throw new Error('Failed to fetch data');
         }
         const data = await response.json();
         setProduct(data.data);
