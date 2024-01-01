@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>STYLiSH</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link href="stylish.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="header">
+    <div class="white-header">
+      <div class="header-part1">
+        <a href="/stylish.html" class="logo-link">
+          <img src="images/logo.png" alt="Logo" class="logo" />
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-li">
+            <a href="/stylish.html?category=women" class="nav-text nav-item" data-category="women">女裝</a>
+          </li>
+          <li class="nav-line"></li>
+          <li class="nav-li">
+            <a href="/stylish.html?category=men" class="nav-text nav-item" data-category="men">男裝</a>
+          </li>
+          <li class="nav-line"></li>
+          <li class="nav-li">
+            <a href="/stylish.html?category=accessories" class="nav-text nav-item" data-category="accessories">配件</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header-part2">
+        <div class="search-container">
+          <input type="text" class="search-input" name="search-input" placeholder="搜尋商品" id="searchInput" />
+          <img src="images/search.png" alt="Search Icon" class="search-icon" id="searchIcon" />
+        </div>
+        <ul class="function-nav">
+          <li>
+            <div class="cart">
+              <img src="images/circle.png" alt="Cart Circle" class="cart-dot" />
+              <a class="cart-count">0</a>
+            </div>
+            <a href="/checkout" class="function-text">購物車</a>
+          </li>
+          <li class="vertical-line"></li>
+          <li>
+            <div class="member"></div>
+            <a href="#" class="function-text">會員</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="black-header"></div>
+  </div>
+
+  <div class="padding-1"></div>
+
+  <div class="carousel">
+    <div class="slide-container"></div>
+    <div class="carousel-dots"></div>
+  </div>
+
+  <div class="loader">
+    <img src="images/loader.gif" alt="Loading..." class="loader-img" />
+  </div>
+
+  <div class="main-content">
+    <div class="grid"></div>
+  </div>
+
+  <footer>
+    <ul class="footer-menu">
+      <li><a href="#" class="footer-text">關於 STYLiSH</a></li>
+      <li class="footer-line"></li>
+      <li><a href="#" class="footer-text">服務條款</a></li>
+      <li class="footer-line"></li>
+      <li><a href="#" class="footer-text">隱私政策</a></li>
+      <li class="footer-line"></li>
+      <li><a href="#" class="footer-text">聯絡我們</a></li>
+      <li class="footer-line"></li>
+      <li><a href="#" class="footer-text">FAQ</a></li>
+    </ul>
+    <div class="footer-icons">
+      <img src="images/line.png" alt="Line Icon" />
+      <img src="images/twitter.png" alt="Twitter Icon" />
+      <img src="images/facebook.png" alt="Facebook Icon" />
+    </div>
+    <div class="copy-right">
+      <p class="copy-right-font">&copy; 2018. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="padding-2"></div>
+
+  <script type="module" src="stylish.js"></script>
+</body>
+
+</html>
